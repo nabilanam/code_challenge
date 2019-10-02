@@ -47,7 +47,7 @@ async function goTo(page, isDirectAccess = true) {
     history.pushState('countries', null, 'countries');
     await showCountries();
   } else if (/^countries\/[A-Z]+$/.test(page)) {
-    var code = page.split('/')[1];
+    const code = page.split('/')[1];
     if (isDirectAccess) {
       history.pushState('countries/' + code, null, null);
     } else {
@@ -71,11 +71,11 @@ async function goBack(page) {
 }
 
 window.addEventListener('popstate', function(e) {
-  var page = e.state;
+  const page = e.state;
   if (page != null) {
     goBack(page);
   }
 });
 
-var node = document.getElementById('root');
+const node = document.getElementById('root');
 goTo(window.location.pathname.substring(1));
