@@ -1,0 +1,16 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "task1": "light-server -s ./task1 -w ./task1/* -b 127.0.0.1 -p 3000 -o --historyindex /index.html",
+    "task2": "light-server -s ./task2 -w ./task2/* -b 127.0.0.1 -p 3001 -o"
+  },
+  "dependencies": {
+    "light-server": "^2.6.4"
+  },
+  "devDependencies": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
